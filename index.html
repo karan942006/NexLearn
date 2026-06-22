@@ -277,6 +277,34 @@ body {
     transform: translateY(-1px);
 }
 
+.maker-credit {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    color: var(--text-light);
+}
+
+.maker-link {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.78rem;
+    transition: var(--transition-smooth);
+}
+
+.maker-link i { width: 13px; height: 13px; }
+
+.maker-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 /* ===== Main Content ===== */
 .main-content {
     flex: 1;
@@ -2102,6 +2130,12 @@ body {
                 <button class="settings-trigger-btn" id="open-settings-btn">
                     <i data-lucide="settings"></i> <span>Gemini API Key</span>
                 </button>
+                <div class="maker-credit">
+                    <span>Made by</span>
+                    <a href="https://www.linkedin.com/in/siddhi-salvi-288a59375/" target="_blank" rel="noopener noreferrer" class="maker-link">
+                        <i data-lucide="linkedin"></i> Siddhi Salvi
+                    </a>
+                </div>
             </div>
         </aside>
 
@@ -2609,7 +2643,7 @@ body {
     <script>
 // NexLearn - Core Application Logic
 
-const DEFAULT_KEY = atob('QVEuQWI4Uk42S0NVeU5FaVpjTDFLclZqZTN4V2tNZGNDRi1fZURPRGIwY1FvcjRjSWdQR3c=');
+const DEFAULT_KEY = 'AQ.Ab8RN6KCUyNEiZcL1KrVje3xWkMdcCF-_eDODb0cQor4cIgPGw';
 
 const DEFAULT_STATE = {
     xp: 0, level: 1, streak: 0, lastActiveDate: null, apiKey: DEFAULT_KEY,
